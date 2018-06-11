@@ -1,22 +1,5 @@
 # Topics
 
-- UML modelling 
-	- The “4+1” view 
-	- Logical view 
-		- Class and object diagrams 
-		- Packages 
-		- State diagrams 
-	- Process view 
-		- Sequence diagrams 
-		- Communication diagrams 
-		- Activity diagram 
-		- Interaction Overview Diagrams 
-	- Deployment view 
-		- Deployment diagrams 
-	- Implementation view 
-		- Composite diagrams 
-		- Component diagrams 
-	- UML diagrams and RUP
 - Agile methods
 	- Agile principles
 	- Scrum
@@ -192,6 +175,33 @@ Software does not wear out, no physical laws, specifications constantly changes.
 
 # Lecture 4
 
+- UML modelling 
+	+ The “4+1” view 
+	+ Logical view 
+		* Class and object diagrams 
+		* Packages 
+		* State diagrams 
+	+ Process view 
+		* Sequence diagrams 
+			- How objects interact together
+			- Follows process from inception to termination
+			- Horizontal and vertical
+			- Shows life of object
+			- Dotted lines between objects
+			- Ends with X
+			- Focus of control (sender/reciever) shown by narrow rectangle
+			- Simple message SENT shown by SOLID line between focus of control (rectangles) and labelled
+			- Simple message RECIEVED shown by DOTTED line between focus of control (rectangles) and labelled
+		* Communication diagrams 
+		* Activity diagram 
+		* Interaction Overview Diagrams 
+	+ Deployment view 
+		* Deployment diagrams 
+	+ Implementation view 
+		* Composite diagrams 
+		* Component diagrams 
+	+ UML diagrams and RUP
+
 UML is a modelling language
 
 - Two important components of a software development methodology:
@@ -294,7 +304,45 @@ UML is a modelling language
 
 - Structure modelling
 	+ Used during analysis/design to understand the problem from a business perspective.
-	+ 
+	+ Analysis - Logical structure, not concerned with infrastructure or code
+	+ Design - Database tables, file formats, data types, concerned with infra and code
+
+- Domain model
+	+ Created during analysis
+		* Domain model contains key data/elements from problem
+		* Common vocabulary between client and dev
+		* No implementation details
+		* Contains methods and relationships between classes
+	+ Identify classes using textual analysis
+		* Reading requirements/functional spec
+			- Nouns - Classes
+			- Verbs - Methods
+			- Adjectives - Attributes
+		* Be aware of scope
+		* Association
+			- Any dependency between 2+ classes will be an association
+			- Reference from one to another may be an association
+			- Verb phrases from the problem may be an association
+			- Real world knowledge will lead you to associations
+		* Attributes
+			- Belonging to the object
+		* Operations
+			- OR Changes the object (manipulates data)
+			- OR Performs a computation
+			- OR Monitors the object
+	+ Data Dictionary
+ 		* Paragraph of each object class containing
+			- Scope of class
+			- Attributes and operations
+			- Subclasses that inherit
+		* Template
+			- Class Name
+			- Short description
+			- List of attributes
+			- List of Operations
+				+ Target class
+				+ Return value
+				+ Description (brief)
 
 ---
 
