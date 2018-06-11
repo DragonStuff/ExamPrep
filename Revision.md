@@ -45,8 +45,8 @@
 # Lecture 1
 
 Software engineering has two main components.
-PRODUCT - The actual software product or system that is built and put into operation.
-PROCESS - A framework for the tasks that are required to build high-quality software.
+- PRODUCT - The actual software product or system that is built and put into operation.
+- PROCESS - A framework for the tasks that are required to build high-quality software.
 
 Engineering knowledge encompasses scheduling, costing, estimating, building, testing, communicating and organising.
 
@@ -163,10 +163,30 @@ Software does not wear out, no physical laws, specifications constantly changes.
 			* Potential for excessive prototype development time
 			* Expense of implementing prototyping (constant dev)
 	- Iterative/incremental model
-		+ 
+		+ Parts
+			* Develop through repeated cycles in small portions
+			* Prioritise user requirements, increments start with highest
+			* Each iteration introduces features
+		+ Benefits
+			* LESS RISK
+			* Feedback in early stages used for later stages
+			* Reduced cost of requirement changes
+			* Rapid delivery and deployment of useful software
+			* Early increments similar to prototypes
+			* Highest priority requirements have extensive testing
+		+ Limitations
+			* Higher costs due to repeats of same costs
+			* Degraded core of software
+			* Further changes are expensive
 	- Spiral model
+		+ Mixture of prototyping and iterative models
+		+ Spiral rather than a sequence
+		+ Used in large projects such as game development 
 	- Rational Unified Process
+		+ 
 	- Agile development
+		+ Focus on code, iterative approach
+		+ Deliver quickly and evolve quickly
 
 ---
 
