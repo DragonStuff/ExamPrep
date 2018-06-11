@@ -42,7 +42,7 @@
 	- You are given a description of a system and are asked to develop a UML model (e.g. use case diagram, class diagram, sequence diagram, state diagram, activity diagram, etc.)
 	- Similar to the exercises we went through in the labs. 
 
-# Lecture 1
+# Lecture 2
 
 Software engineering has two main components.
 - PRODUCT - The actual software product or system that is built and put into operation.
@@ -130,7 +130,7 @@ Software does not wear out, no physical laws, specifications constantly changes.
 
 ---
 
-# Lecture 2
+# Lecture 3
 
 - Many different processes but they all involve:
 	- Requirements specification - defining what the system should do;
@@ -190,15 +190,111 @@ Software does not wear out, no physical laws, specifications constantly changes.
 
 ---
 
-# Lecture 3
-
-
-
----
-
 # Lecture 4
 
+UML is a modelling language
 
+- Two important components of a software development methodology:
+	+ Process (discussed in the previous lecture)
+	+ Modelling language
+- What is a model?
+	+ A model describes a system using a well defined (modelling) language, which has clear syntax and semantics suitable for both human and computer interpretation.
+
+- Structural model
+	+ “Class” diagrams.
+		* the structure and substructure of the system using objects, attributes, operations, and relationships.
+- Functional model
+	+ “Use case” diagrams.
+		* The functionality of the system from the user's point of view
+- Behavioural model
+	+ Sequence diagrams, activity diagrams and state machine diagrams
+		* The internal behaviour of the system
+
+- Use Case Diagrams
+	+ Information
+		* Use cases are from the USERS's POINT OF VIEW
+		* Interaction between system and user/other system
+			- Example: A borrower borrows a book (Library System)
+		* Functional description of the system is the collection of all use cases
+		* Model functional requirements as Actors interacting with Use Cases
+	+ Structure
+		* Join - Solid line with NO ARROW between User
+		* User - Stick Figure
+		* Action - Oval
+		* Includes (reusable modules) - Dotted line ending in arrow between actions with << includes >>
+			- Example: Inserting a bank card so we can deposit or withdraw cash
+		* Extends (extra actions on certain conditions) - Dotted line ending in arrow between actions with << extends >>
+			- Example: Incorrectly entered PIN
+		* Generatisation/Specialisation (Parent/Child) - Solid line with triangle style arrow at end
+			- Example: "Business manager" is a specialisation of "Employee"
+
+- Use Case Descriptions
+	+ Template
+		* Case Name
+		* Case ID
+		* Stakeholders/Goals
+		* Description
+		* Actors
+		* Trigger (cause)
+		* Events
+			- Normal flow
+			- Sub-flow
+			- Exceptional flow
+	+ Determine use cases?
+		* Identify actors
+		* Define actor actions, these become use cases
+	+ Describe use cases?
+		* Normal events done by actor
+			- Example: User does _something_
+		* High level ONLY
+		* ONLY DESCRIBE ACTIONS NOT BACKEND ACTIONS
+
+- UML Classes
+	+ ALL BOXES ARE OPTIONAL
+	+ Template
+		* Top box: Class name
+		* Middle box: Attributes (variables)
+		* Lowest box: Operations (functions)
+	+ Prefixes for attributes/operations
+		* `-` Private
+		* `+` Public
+		* `#` Protected
+	+ Join boxes using relations (solid line no arrow), 1-to-1, one-to-many, etc called multiplicity
+		* Defined on both sides
+			- 1..1 _(one to one)_
+			- 0..* _(many to many)_
+			- 0..1 _(zero to one)_
+			- 2,4 _(either two or four)_
+		* Role names on either side (optional)
+			- Example: Person - Company, _employee_ works for _employer_
+		* Qualifier
+			- In a box attached to the left side, attribute to distinguish between different objects, such as file type in terms of files in a directory.
+	+ There are also generalisations using triangle at end of line.
+		* Example: Mailbox class has in, out, rubbish, general connected together and to Mailbox via a generalisation.
+	+ Object Diagrams
+		* Object Symbol
+			- INSTANCE OF AN OBJECT, SAVED LIKE A PROGRAM STATE
+			- Uses dotted line with arrow from Instance to Class
+	+ Links and associations
+		* Link is an instance of an association
+		* Association - Objects need to communicate (default)
+			- Has-A, example Driver drives * _(many)_ Car
+			- Diamond at LEFT SIDE (HAS A)
+				+ Example: Car has Passengers, diamond on car side, continued on solid line attached to passenger
+		* Aggregation - One object part of another object
+			- Same as specialisation, but with diamond on PARENT (UNFILLED)
+		* Inheritance - One object is a more specialized version of another object
+			- 
+		* Composition (x is composed of y)
+			- Diamond on PARENT, FILLED
+		* Navigability
+			- Arrow head on association _(as above)_, means a class knows about another (instead of it being inherited)
+		* Inheritance (x IS A y)
+			- Same as always, unfilled triangle pointed towards parent
+
+- Structure modelling
+	+ Used during analysis/design to understand the problem from a business perspective.
+	+ 
 
 ---
 
