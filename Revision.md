@@ -1,10 +1,5 @@
 # Topics
 
-- Agile methods
-	- Agile principles
-	- Scrum
-	- Extreme Programming
-	- Dynamic Systems Development Method
 - Rational Unified Process (RUP)
 - Software testing and Test-Driven Development
 	- Verification and validation
@@ -175,33 +170,6 @@ Software does not wear out, no physical laws, specifications constantly changes.
 
 # Lecture 4
 
-- UML modelling 
-	+ The “4+1” view 
-	+ Logical view 
-		* Class and object diagrams 
-		* Packages 
-		* State diagrams 
-	+ Process view 
-		* Sequence diagrams 
-			- How objects interact together
-			- Follows process from inception to termination
-			- Horizontal and vertical
-			- Shows life of object
-			- Dotted lines between objects
-			- Ends with X
-			- Focus of control (sender/reciever) shown by narrow rectangle
-			- Simple message SENT shown by SOLID line between focus of control (rectangles) and labelled
-			- Simple message RECIEVED shown by DOTTED line between focus of control (rectangles) and labelled
-		* Communication diagrams 
-		* Activity diagram 
-		* Interaction Overview Diagrams 
-	+ Deployment view 
-		* Deployment diagrams 
-	+ Implementation view 
-		* Composite diagrams 
-		* Component diagrams 
-	+ UML diagrams and RUP
-
 UML is a modelling language
 
 - Two important components of a software development methodology:
@@ -348,18 +316,173 @@ UML is a modelling language
 
 # Lecture 5
 
-
+- Agile methods
+	- Agile principles
+		+ The highest priority is to satisfy the customer through early and continuous delivery of valuable software.
+		+ Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage. 
+		+ Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.
+		+ Business people and developers must work together daily throughout the project.
+		+ Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
+		+ The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.
+		+ Working software is the primary measure of progress.
+		+ Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+		+ Continuous attention to technical excellence and good design enhances agility.
+		+ Simplicity--the art of maximizing the amount of work not done--is essential.
+		+ The best architectures, requirements, and designs emerge from selforganizing teams.
+		+ At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behaviour accordingly.
 
 ---
 
 # Lecture 6
 
-
+- Scrum
+	+ Characteristics
+		* Self-organising
+		* SPRINTS!
+		* Requirements are user stories in a BACKLOG
+		* No specifics
+		* Type of Agile
+	+ Sprints
+		* How progress is made
+		* 2-4 weeks
+		* Design, coding and testing all occurs in the sprint
+	+ Roles
+		* Product owner
+			- Decide features
+			- Decide release date
+			- Decide content
+			- ROI
+			- Prioritises/adjusts features and priority every iteration
+			- Accept/Reject work
+		* Scrum Master
+			- Represents management to project
+			- Enforces scrum
+			- Enforces productivity
+			- Enables cooperation
+		* Team
+			- 5 to 9 people
+			- Cross-functional (programmers, testers, UI, etc)
+			- Self organised, may only change members between sprints
+	+ Meetings
+		* Sprint planning
+			- Decide on goal for sprint - (focused task)
+			- Tasks are identified and estimated in hours/story points
+			- Collaborative (all of the team)
+		* Sprint review
+			- Review accomplishments
+			- Demo
+			- INFORMAL (2 hour prep time, no slides)
+			- ALL TEAM
+		* Sprint retroactive
+			- Look at what is/isn't working
+				+ Start, stop, continue doing
+			- 15-30 mins
+			- Every sprint end
+			- ALL TEAM including customers
+		* Daily scrum meeting
+			- 15 minutes, stand up
+			- Questions
+				+ What did you do yesterday?
+				+ What will you do today?
+				+ Is anything in your way?
+			- Commitment-oriented
+	+ Artifacts (key items)
+		* Product backlog
+			- Item (As x I want to y)
+			- Estimated difficulty (STORY POINTS)
+		* Sprint backlog
+			- Item (Code x, write y)
+			- Days of week with hours/story points
+			- Any member can add, delete or change
+			- Update as work is added, done
+		* Burndown charts (of remaining user story points)
+			- Burn down in either hours or story points
+- Extreme Programming
+- Dynamic Systems Development Method
 
 ---
 
 # Lecture 7
-
+- UML modelling 
+	+ The “4+1” view 
+		* Conceptual
+			- Logical
+				+ Functionality _(that the system provides to end users)_
+				+ Components
+					* Class
+					* Object
+					* Package
+					* Composite Structure
+					* State Machine
+			- Process _(dynamic aspects)_
+				+ Components
+					* Sequence
+					* Communication
+					* Activity
+					* Timing
+					* Interaction Overview
+				+ Performance
+				+ Scalability
+				+ Throughput
+		* Physical (represent application compoents as built and deployed)
+			- Implementation
+				+ Configuration
+				+ Management
+			- Deployment
+	+ Logical view 
+		* Class and object diagrams 
+		* Packages 
+			- Expressed same as Java packages (system.company.component)
+			- Each package has many classes
+			- Can import from other packages
+		* State diagrams 
+			- Characteristics
+				+ Model dynamic aspects by considering use cases
+				+ Behavioral model, states the object goes through
+				+ Reacts to external stimuli
+			- Features
+				+ Set of values/atributes that describe a point in an objects life
+			- State
+				+ Object states change, for example a student from new to current to former
+			- Event
+				+ Takes places at a point
+				+ Cocurrency supproted
+			- FORMAT
+				+ State - Rectangle with rounded corners
+				+ Initial state - Small filled in circle
+				+ Final state - Small filled in cirle with circle surrounding not filled
+				+ Event - A text label
+				+ Transition between events - Solid line with arrow
+					* Source State
+					* Trigger (EVENT TRIGGER)
+					* Condition (ONLY IF) (optional)
+					* Action (ACT ON OBJECT) (optional)
+					* Target State
+	+ Process view 
+		* Sequence diagrams 
+			- How objects interact together through MESSAGES
+			- Follows process from inception to termination
+			- Horizontal and vertical
+			- Shows life of object
+			- Dotted lines between objects
+			- Ends with X
+			- Focus of control (sender/reciever) shown by narrow rectangle
+			- Simple message SENT shown by SOLID line between focus of control (rectangles) and labelled
+			- Simple message RECIEVED shown by DOTTED line between focus of control (rectangles) and labelled
+		* Communication diagrams 
+			- How objects interact together through METHODS
+			- Same as sequence but different style
+			- Focus on links between objects
+		* Activity diagram 
+			- Model workflow on the backend
+			- Analysing use case
+		* Interaction Overview Diagrams 
+	+ Deployment view 
+		* Deployment diagrams 
+	+ Implementation view 
+		* Composite diagrams 
+		* Component diagrams 
+	+ UML diagrams and RUP
 
 
 ---
