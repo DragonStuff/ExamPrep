@@ -253,7 +253,6 @@ UML is a modelling language
 		* Aggregation - One object part of another object
 			- Same as specialisation, but with diamond on PARENT (UNFILLED)
 		* Inheritance - One object is a more specialized version of another object
-			- 
 		* Composition (x is composed of y)
 			- Diamond on PARENT, FILLED
 		* Navigability
