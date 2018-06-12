@@ -511,34 +511,242 @@ UML is a modelling language
 
 - Software testing and Test-Driven Development
 	- Verification and validation
+		+ Verification
+			* "Are we building the product right?“
+		+ Validation
+			* "Are we building the right product?“
 	- Static verification (software inspection)
+		+ Incomplete systems can be inspected.
+		+ Concerned with analysis of the static system representation to discover problems (static verification)
+		+ These involve people examining the source representation with the aim of discovering anomalies and defects.
+		+ No need to have compiled, working software. Done on the source.
+		+ EG, check all input variables are used, output variables are set to a value
 	- Dynamic verification (software testing)
+		+ Forcing the program to work incorrectly.
+		+ Design test cases for dynamic verification (live software testing)
+		+ Performed by two or three groups
+			* Software Developer
+			* Customer
+			* (large project) Independant software testing groups
+		+ Test Case Matrix
+			* ID
+			* Test Case
+			* Purpose
+			* Expected Result
+			* Actual Result
+		+ Test Case
+			* Title
+			* Actions
+			* Expected Result
+			* Pass/Fail
+			* Observations
+		+ Unit testing
+			* Test each individual component (methods or functions)
+			* Complete test coverage is the aim by testing every operation, attribute and state for the object
+		+ Automated testing suites
+			* JUnit, Django tests.py, CodeClimate, RUN ON Jenkins, Travis
+		+ White box testing
+			* Focused on program control structure
+			* Statement, decision, condition, path coverage
+			* Cover everything at least once
+		+ Black box testing
+			* Checks inputs and outputs without seeing the code
+			* Equivalence Partitioning
+			* Boundary Value Analysis
+		+ Systems Testing
+			* Function
+			* Performance
+			* Acceptance - Alpha and Beta testing
 	- Test-driven development
+		+ Tests written before code
+		+ Continue to next component once tests are passing and code is complete
+		+ Chunks of functionality
+		+ Benefits
+			* Code coverage
+			* Regression testing
+			* Simplified debugging
+			* System documentation through the test code
+				- Can also be automatically generated into HTML/etc
 
 ---
 
 # Lecture 9
 
-- UML diagrams and RUP
 - Rational Unified Process (RUP)
+	+ Model for the software development process
+	+ Characteristics
+		* HAS 4 PHASES
+		* HAS MULTIPLE ACTIVITIES
+		* HAS ITERATIONS
+	+ Practices
+		* Iterative
+		* Manage requirements
+		* Reusability
+		* Visualisation through UML
+		* Testing driven
+		* Using git, subversion, etc
+	+ Structure
+		* Horizontal axis represents time
+			- Time is blocked at the bottom into milestones
+		* Vertical axis represents workflows
+	+ Types
+		* Roles - WHO
+		* Work Products - WHAT
+		* Tasks - HOW
+	+ Times
+		* Inception
+			- ITERATION FOR EACH PART STARTING WITH GOALS/SCOPE (3)
+			- Scope
+			- Acceptance criteria
+			- Use cases
+			- Architectures
+			- Cost
+			- Schedule
+			- Risks
+			- Business case
+			- Work plan
+			- POSITION STATEMENT
+		* Elaboration
+			- ITERATION FOR EACH PART (3)
+			- Define system architecture and expected outcome
+			- Vision
+			- Plan
+			- Make solid use cases
+			- DEVELOPMENT ENVIRONMENT
+		* Construction
+			- ITERATION FOR EACH FEATURE SET STARTING WITH CORE (AS MANY AS REQUIRED/BUDGETTED)
+			- Develop components
+			- Develop features
+			- Integrate parts
+			- TEST
+			- Versions, alpha, beta, etc.
+		* Transition
+			- Give software to users
+			- Mature
+			- Beta testing
+			- Parallel operation with old (legacy) system
+			- TRAINING
+			- Rollout to marketing, distribution, sales etc.
+- UML diagrams and RUP
+	+ Each workflow is associated with one or more models
 
 ---
 
 # Lecture 10
 
 - Extreme Programming
+	+ Values
+		* Simplicity - What is needed and nothing more
+		* Communication - Face to face every day
+		* Feedback - Making required changes to working software iterations 
+		* Respect - Everyone is valued
+		* Courage - Truth about progress and estimates, adaption
+	+ Process
+		* Release Planning
+		* Iteration Planning
+		* Planning
+		* Designing - Using spikes (throwaway prototypes)
+		* Coding - to agreed standards
+		* Testing - all must have unit tests, acceptance tests
+		* Managing - Standup every day, dedicated space
+	+ SCRUM VS XP
+		* Scrum teams do not allow changes, XP can adapt as needed
+		* Extreme Programming work in strict priority order
+		* Scrum has no engineering practices but XP has TDD, Pair Programming etc.
 - Dynamic Systems Development Method
+	+ Form of AGILE
+	+ Active user involvement
+	+ Team decision making
+	+ Frequent delivery
+	+ Timeboxing - Given set of tasks to achieve, need to deliver product at end, can drop functionality to deliver in time
+	+ MoSCoW Rules
+		* Must have - CORE
+		* Should have - PRIORITY
+		* Could have - ENHANCE
+		* Want to have - EXTRAS
+	+ Uses prototyping of the following sorts
+		* Business - Stakeholders
+		* Usability - Interface
+		* Performance - Volume
+		* Capability - Options
 
 ---
 
 # Lecture 11
 
 - DevOps
+	+ Unify Developer and IT Operation teams
+	+ Increased collaboration between development and operations
+	+ Shared responsibility
+	+ AUTOMATION!
+	+ Lifecycle (ITERATIVE)
+		* Development
+		* Testing
+		* Integration
+		* Deployment
+		* Monitoring
+	+ Continuous Integration allows you to connect a shared repository of code to a CI server
+		* It builds, tests and presents results of the build/test for debugging to the team
+		* Travis, Jenkins, GitLab CI
+		* Every time code is checked in
+	+ Different environments
+		* Development
+		* Testing
+		* Staging
+		* Production
+	+ Continous Delivery
+		* Connect your CI server to your infrastructure, allowing it to deploy across test and staging then present the result to the team
+		* It can manually be approved into production to prevent issues
+		* Several times a day
+		* Github and AWS CodeDeploy
+	+ Infrastructure as Code
+		* All infra can be set up through code
+		* THIS IS THE CORE OF DEVOPS
+		* Same environment every time
+	+ Tools
+		* SCM (Git)
+		* Build Server (Jenkins, SonarQube, Artifactory)
+		* Configuration Management (Puppet, Chef)
+		* Visual Infra (AWS, Azure APIs for Infra as Code)
+		* Test Automation (performing tests, Selenium/Water)
+	+ Benefits
+		* Rapid delivery
+		* Reliability
+		* Scalability
 
 ---
 
 # Lecture 12
 
 - Capability Maturity Model Integration (CMMI) model
+	+ CMMI (Capability Maturity Model Integration) is a proven industry framework to improve product quality and development efficiency for both hardware and software
+	+ USED FOR PROCESS IMPROVEMENT SUCH AS BEST PRACTICE, FRAMEWORK, SUPPORT
+	+ 5 LEVELS
+		* Initial - Poorly controlled
+		* Managed - Planned, reactive
+		* Defined - Processes, standards, procedures, tools defined at organisational level, proactive
+		* Quantitatively Managed - Controlled by statistics/numerically focused techniques
+		* Optimising - Process performance improved incrementally, innovating through technological improvements
+	+ Agile with CMMI
+		* Daily Scrum
+		* Pair programming
+		* Backlog grooming
+		* Continuous integration (CI)
+		* Estimating story points per task
+		* User Stories
+		* Test Driven Development (TDD)
+
+- Ad Hoc Processes
+	+ Process descriptions are not rigorously followed or enforced.
+	+ Performance is highly dependent on current practitioners.
+	+ Understanding of the current status of a project is limited.
+	+ Immature processes result in fighting fires:
+		* There is no time to improve—instead, practitioners are constantly reacting.
+		* Firefighters get burned.
+		* Embers might rekindle later.
+- Institutionalised Processes
+	+ The organization builds an infrastructure that contains effective, usable, and consistently applied processes.
+	+ Endure after people leave
+
 
 ---
