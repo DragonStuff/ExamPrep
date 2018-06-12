@@ -96,7 +96,6 @@ Software does not wear out, no physical laws, specifications constantly changes.
 			* Fixing errors/bugs
 		+ Perfective maintenance
 			* Changing to new needs
-
 		+ If the users find they can get work done with the new system, then they will soon identify additional tasks for it to do and require changed forms for interaction with the system.
 
 ---
