@@ -1,13 +1,6 @@
-# Topics
+# Revision
 
-- Rational Unified Process (RUP)
-- Software testing and Test-Driven Development
-	- Verification and validation
-	- Static verification (software inspection)
-	- Dynamic verification (software testing)
-	- Test-driven development
-- DevOps
-- Capability Maturity Model Integration (CMMI) model
+CSIT314, the last --4 subject. Thank goodness.
 
 # Questions
 
@@ -160,8 +153,6 @@ Software does not wear out, no physical laws, specifications constantly changes.
 		+ Mixture of prototyping and iterative models
 		+ Spiral rather than a sequence
 		+ Used in large projects such as game development 
-	- Rational Unified Process
-		+ 
 	- Agile development
 		+ Focus on code, iterative approach
 		+ Deliver quickly and evolve quickly
@@ -397,8 +388,6 @@ UML is a modelling language
 			- Update as work is added, done
 		* Burndown charts (of remaining user story points)
 			- Burn down in either hours or story points
-- Extreme Programming
-- Dynamic Systems Development Method
 
 ---
 
@@ -474,45 +463,82 @@ UML is a modelling language
 			- Same as sequence but different style
 			- Focus on links between objects
 		* Activity diagram 
-			- Model workflow on the backend
-			- Analysing use case
+			- TELLS YOU WHAT HAPPENS BUT NOT WHO DOES WHAT
+			- Characteristics
+				+ Model workflow on the backend
+				+ Analysing a use case
+			- PARTS
+				+ Initial node
+				+ Actions - Rounded rectangle
+				+ Control flow - Arrow
+				+ Final node - Circle with X (parallel) OR with dot (final all)
+				+ ObjectNode - Sharp rectangle with object type
+				+ DecisionNode - Diamond with multiple outs using `[]` labels going to other parts of flow
+				+ MergeNode - Two diamonds with multiple outs using `[]` labels (one is decision node, one is merge node)
+				+ ForkNode - Rectangle, parallel execution
+				+ JoinNode - Rectangle, end of parallel execution and continue once both are done
+				+ Timed trigger - Hourglass with label
+		* SWIMLANES SEPERATE ACTIVITY DIAGRAM HORIZONTALLY WITH NAMES OF ACTORS AT TOP!!!!
 		* Interaction Overview Diagrams 
+			- SAME FORMAT AS ACTIVITY DIAGRAM
+			- ADDS A FUNCTION THAT CONSITS OF AN INTERNAL ACTIVITY DIAGRAM WITH `sd` or `ref` at the top left
+			- Sequence
+			- Communication
+			- Recursion
+- DIAGRAM
 	+ Deployment view 
 		* Deployment diagrams 
+			- Models run-time architecture
+			- Shows servers and software
+			- Node is a 3D box with name, type labels inside underlined
+			- Artifact is a rectangle representing a file, executable, document, prototype etc using `<<artifact>>`
+			- Association with `<< layer >>` where layer is how it communicates
+			- NODES CAN CONTAIN THINGS LIKE ARTIFACTS OR COMPONENTS (:keyboard, :motherboard)
 	+ Implementation view 
 		* Composite diagrams 
+			- Static structure diagram
+			- Shows the internal structure of a class and the collaborations that this structure makes possible
+			- Methods, parameters and variables via small squares with labels inside of a class
 		* Component diagrams 
-	+ UML diagrams and RUP
-
+			- Represents high level classes and services
+			- Pieces of software that make up a system
+			- One or more classes at runtime
+			- Assembly connector like an Eye with protective layer connecting two components
 
 ---
 
 # Lecture 8
 
-
+- Software testing and Test-Driven Development
+	- Verification and validation
+	- Static verification (software inspection)
+	- Dynamic verification (software testing)
+	- Test-driven development
 
 ---
 
 # Lecture 9
 
-
+- UML diagrams and RUP
+- Rational Unified Process (RUP)
 
 ---
 
 # Lecture 10
 
-
+- Extreme Programming
+- Dynamic Systems Development Method
 
 ---
 
 # Lecture 11
 
-
+- DevOps
 
 ---
 
 # Lecture 12
 
-
+- Capability Maturity Model Integration (CMMI) model
 
 ---
